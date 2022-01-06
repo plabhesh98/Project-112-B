@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Color Identification Web App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      </head>
+
+      <body>
+          <div class="container">
+            <center>
+                <h3 class="btn btn-info heading">
+                   Color Identification Web App
+                </h3>
+              <br><br>
+              <p style="font-size: 22px;">Take a photo of any color to know its name
+              <br>
+              <p>On the following colors the model is trained</p>
+              <span>
+                  <b style="color: white;">White, </b>
+                  <b style="color: red;">Red, </b>
+                  <b style="color: yellow;">Yellow, </b>
+                  <b style="color: orange;">Orange, </b>
+                  <b style="color: cyan;">Light Blue & </b>
+                  <b style="color: green">Green</b>
+              </span>
+              </p>
+              <br>
+              <div class="col-md-4 col-sm-12 col-xs-12">
+                <label id="view">Webcam View - </label>
+                <br>
+                <div id="camera"></div>
+                  <br>  
+                  <button class="btn btn-warning" onclick="Take_Snapshot()">Capture Image</button>
+                  </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <label id="prediction">Prediction</label>
+                  <p class="color_name" id="color_name"></p>
+                  <br>
+                  <label id="pred">Prediction - 2</label>
+                  <p class="color_name" id="color_name2"></p>
+                 </div>
+        
+              <div class="col-md-4 col-sm-12 col-xs-12">
+                  <label id="snapshot">Snapshot - </label>
+                 <div id="result">
+                 </div>
+                <br><br>
+                <button class="btn btn-info" onclick="Identify_color()">Identify color</button>
+              </div>
+        
+            </center>
+          </div>
+        <script src="main.js"></script>
+      </body>
+</html>
